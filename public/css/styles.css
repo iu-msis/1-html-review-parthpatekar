@@ -1,4 +1,11 @@
 thead{
     background-color: firebrick;
     color: white;
-  }
+}
+
+p {
+  color: gray;
+  font-size: 20px;
+  line-height: 24px;
+  word-wrap: break-word;
+}
