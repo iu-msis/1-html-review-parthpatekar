@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js">
+    </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+
+        </header>
+        <nav class="row navbar navbar-default">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="main-menu">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="topic.html">Machine Learning</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main class="row">        
+            <form action="confirmation.html" method="post">
+                <div class="col-lg-4">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <td class="text-center" colspan="2">                                
+                                    Submit form to contact us                                                                 
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    First Name:                    
+                                </td>
+                                <td>
+                                    <input type="text" name="firstname" id="firstname">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Last Name: 
+                                </td>
+                                <td>
+                                    <input type="text" name="lastname" id="lastname">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Email: 
+                                </td>
+                                <td>
+                                    <input type="text" name="email" id="email">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Comments/Questions:
+                                </td>
+                                <td>
+                                    <textarea name="comments" id="comments"> </textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" colspan="2">
+                                    <input type="submit" name="submit" id="submit" value="Contact Us!" class="btn">
+                                </td>
+                            </tr>
+                        </tbody>                        
+                    </table>
+                </div>                
+            </form>
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+</body>
+
+</html>
