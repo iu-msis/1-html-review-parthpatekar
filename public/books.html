@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <title>Freddie Ward</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href=".\index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href=".\topic.html">Galleries I visited</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href=".\books.html">Recommended Books</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href=".\contact_us.html">Contact Us!</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="row">
+      <div class="col-lg-12">
+        <table class="table">
+          <thead>
+            <th>
+              Title
+            </th>
+            <th>
+                Author(s)
+            </th>
+            <th>
+                Year Published
+            </th>
+            <th>
+                Publisher
+            </th>
+            <th>
+                Page Count
+            </th>
+            <th>
+                MSRP
+            </th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Janson's Basic History of Western Art (9th Edition)
+              </td>
+              <td>
+                Penelope J.E. Davies, Frima Fox Hofrichter, Joseph F. Jacobs, Ann S. Roberts, David L. Simon
+              </td>
+              <td>
+                  2013
+              </td>
+              <td>
+                  Pearson
+              </td>
+              <td>
+                  688
+              </td>
+              <td>
+                  $64
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Art Since 1900: Volume 1: 1900 to 1944; Volume 2: 1945 to the Present Third Edition
+              </td>
+              <td>
+                Hal Foster, Rosalind Krauss, Yve-Alain Bois, Benjamin H. D. Buchloh, David Joselit
+              </td>
+              <td>
+                  2016
+              </td>
+              <td>
+                Thames & Hudson
+              </td>
+              <td>
+                  896
+              </td>
+              <td>
+                  $165
+              </td>
+            </tr>
+            <tr>
+              <td>
+                The Lives of the Artists (Oxford World's Classics)
+              </td>
+              <td>
+                Giorgio Vasari
+              </td>
+              <td>
+                  2008
+              </td>
+              <td>
+                Oxford University Press
+              </td>
+              <td>
+                  616
+              </td>
+              <td>
+                  $12
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Classical Art: From Greece to Rome (Oxford History of Art) 1st Edition
+              </td>
+              <td>
+                Mary Beard, John Henderson
+              </td>
+              <td>
+                  2001
+              </td>
+              <td>
+                Oxford University Press
+              </td>
+              <td>
+                  304
+              </td>
+              <td>
+                  $25
+              </td>
+            </tr>
+            <tr>
+              <td>
+                History of Modern Art Volume I 7th Edition
+              </td>
+              <td>
+                H. Arnason, Elizabeth Mansfield
+              </td>
+              <td>
+                  2012
+              </td>
+              <td>
+                  Pearson
+              </td>
+              <td>
+                  440
+              </td>
+              <td>
+                $100
+              </td>
+            </tr>        
+          </tbody>
+        </table>
+        <br>
+        <form action="">
+            <table class="table">
+                <thead>
+                    <th colspan="2">
+                        Add a New Row
+                    </th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Title:
+                        </td>
+                        <td>
+                            <input type="text" name="title">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Author(s):
+                        </td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Year Published:
+                        </td>
+                        <td>
+                            <input type="number" min="0" max="2021">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Publisher:
+                        </td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Page Count:
+                        </td>
+                        <td>
+                            <input type="number" min="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            MSRP:
+                        </td>
+                        <td>
+                            <input type="number" min="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center" colspan="2">
+                            <input type="submit" name="submit" id="submit" value="Add" class="btn btn-dark">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+      </div>
+    </main>
+    <footer>
+
+    </footer>
+  </div>
+</body>
+
+</html>
