@@ -21,7 +21,7 @@
 
   <link rel="stylesheet" href="css/styles.css">
 
-  <title>Freddie Ward</title>
+  <title>D&S Assignments</title>
 </head>
 
 <body>
@@ -50,80 +50,32 @@
           </li>
         </ul>
       </div>
-    </nav>
-
+    </nav>    
+    
     <main class="row">
-      <div class="col-lg-12">                
+      <div class="col-lg-3">
         <div id="user">
-          <img :src="result.picture.large" alt="profile pic">
-          <table class="table">
-            <thead>
-              <th colspan="2">
-                About Me
-              </th>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  Name:
-                </td>
-                <td>
-                  {{ result.name.first + " " + result.name.last }}
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Country of Origin:
-                </td>
-                <td>
-                  {{result.location.country}}
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Email:
-                </td>
-                <td>
-                  <a :href="'mailto:'+result.email">{{result.email}}</a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Birth date:
-                </td>
-                <td>
-                  {{format_date(result.dob.date)}}
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Age:
-                </td>
-                <td>
-                  {{result.dob.age}}
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Address:
-                </td>
-                <td>
-                  {{ result.location.city + ", " + result.location.state }}
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Phone Number:
-                </td>
-                <td>
-                  {{result.cell}}
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>        
-      </div>
+          <div class="card bg-light" style="width: 16rem;">
+            <img class="card-img-top" :src="result.picture.large" alt="profile pic">
+            <div class="card-body">
+              <h5 class="card-title">{{ result.name.first + " " + result.name.last }}</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><b>Country of Origin: </b>{{ result.location.country }}</li>
+              <li class="list-group-item"><b>Email: </b><a :href="'mailto:'+result.email">{{ result.email }}</a></li>
+              <li class="list-group-item"><b>Birthday: </b>{{ format_date(result.dob.date) }}</li>
+              <li class="list-group-item"><b>Age: </b>{{ result.dob.age }}</li>
+              <li class="list-group-item"><b>Address: </b>{{ result.location.city + ", " + result.location.state }}</li>
+              <li class="list-group-item"><b>Phone: </b>{{ result.cell }}</li>          
+            </ul>
+            <form v-on:submit.prevent="fetch_user_data">
+              <button class="btn btn-dark" type="submit">Refresh</button>
+            </form>
+          </div>
+        </div>
+      </div>      
     </main>
+
     <footer>
 
     </footer>
