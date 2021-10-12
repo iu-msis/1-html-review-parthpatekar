@@ -50,198 +50,122 @@
       </div>
     </nav>
 
-    <main class="row">
-      <div class="col-lg-12">
-        <table id="book-table" class="table">
-          <thead>
-            <th>
-              Title
-            </th>
-            <th>
-                Author(s)
-            </th>
-            <th>
-                Year Published
-            </th>
-            <th>
-                Publisher
-            </th>
-            <th>
-                Page Count
-            </th>
-            <th>
-                MSRP
-            </th>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                Janson's Basic History of Western Art (9th Edition)
-              </td>
-              <td>
-                Penelope J.E. Davies, Frima Fox Hofrichter, Joseph F. Jacobs, Ann S. Roberts, David L. Simon
-              </td>
-              <td>
-                  2013
-              </td>
-              <td>
-                  Pearson
-              </td>
-              <td>
-                  688
-              </td>
-              <td>
-                  $64
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Art Since 1900: Volume 1: 1900 to 1944; Volume 2: 1945 to the Present Third Edition
-              </td>
-              <td>
-                Hal Foster, Rosalind Krauss, Yve-Alain Bois, Benjamin H. D. Buchloh, David Joselit
-              </td>
-              <td>
-                  2016
-              </td>
-              <td>
-                Thames & Hudson
-              </td>
-              <td>
-                  896
-              </td>
-              <td>
-                  $165
-              </td>
-            </tr>
-            <tr>
-              <td>
-                The Lives of the Artists (Oxford World's Classics)
-              </td>
-              <td>
-                Giorgio Vasari
-              </td>
-              <td>
-                  2008
-              </td>
-              <td>
-                Oxford University Press
-              </td>
-              <td>
-                  616
-              </td>
-              <td>
-                  $12
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Classical Art: From Greece to Rome (Oxford History of Art) 1st Edition
-              </td>
-              <td>
-                Mary Beard, John Henderson
-              </td>
-              <td>
-                  2001
-              </td>
-              <td>
-                Oxford University Press
-              </td>
-              <td>
-                  304
-              </td>
-              <td>
-                  $25
-              </td>
-            </tr>
-            <tr>
-              <td>
-                History of Modern Art Volume I 7th Edition
-              </td>
-              <td>
-                H. Arnason, Elizabeth Mansfield
-              </td>
-              <td>
-                  2012
-              </td>
-              <td>
-                  Pearson
-              </td>
-              <td>
-                  440
-              </td>
-              <td>
-                $100
-              </td>
-            </tr>        
-          </tbody>
-        </table>
-        <br>
-        <form action="">
-            <table class="table">
-                <thead>
-                    <th colspan="2">
-                        Add a New Row
-                    </th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            Title:
-                        </td>
-                        <td>
-                            <input type="text" name="title">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Author(s):
-                        </td>
-                        <td>
-                            <input type="text">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Year Published:
-                        </td>
-                        <td>
-                            <input type="number" min="0" max="2021">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Publisher:
-                        </td>
-                        <td>
-                            <input type="text">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Page Count:
-                        </td>
-                        <td>
-                            <input type="number" min="0">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            MSRP:
-                        </td>
-                        <td>
-                            <input type="number" min="0">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-center" colspan="2">
-                            <input type="submit" name="submit" id="submit" value="Add" class="btn btn-dark">
-                        </td>
-                    </tr>
-                </tbody>
+    <main>
+      <div class="row">
+        <div class="col-lg-12">
+          <div id="books">
+            <table id="book-table" class="table">
+              <thead>
+                <th>
+                  Title
+                </th>
+                <th>
+                    Author(s)
+                </th>
+                <th>
+                    Year Published
+                </th>
+                <th>
+                    Publisher
+                </th>
+                <th>
+                    Page Count
+                </th>
+                <th>
+                    MSRP
+                </th>
+              </thead>
+              <tbody>
+                <tr v-for="book in books">
+                  <td>
+                    {{ book.title }}
+                  </td>
+                  <td>
+                    {{ book.authors}}
+                  </td>
+                  <td>
+                      {{ book.yearPublished }}
+                  </td>
+                  <td>
+                      {{ book.publisher }}
+                  </td>
+                  <td>
+                      {{ book.pageCount }}
+                  </td>
+                  <td>
+                      {{'$' + book.msrp }}
+                  </td>
+                </tr>                    
+              </tbody>
             </table>
-        </form>
-      </div>
+            <br>
+            <form action="">
+                <table class="table">
+                    <thead>
+                        <th colspan="2">
+                            Add a New Row
+                        </th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Title:
+                            </td>
+                            <td>
+                                <input type="text" name="title">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Author(s):
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Year Published:
+                            </td>
+                            <td>
+                                <input type="number" min="0" max="2021">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Publisher:
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Page Count:
+                            </td>
+                            <td>
+                                <input type="number" min="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                MSRP:
+                            </td>
+                            <td>
+                                <input type="number" min="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center" colspan="2">
+                                <input type="submit" name="submit" id="submit" value="Add" class="btn btn-dark">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+          </div>          
+        </div>
+      </div>      
     </main>
     <footer>
 
@@ -251,8 +175,10 @@
   <!-- Table Sort from http://tristen.ca/tablesort/demo/ -->
   <script src='js/tablesort.min.js'></script>
   <script>
-    new Tablesort(document.getElementById('book-table'));
+    new Tablesort(document.getElementById('book-table'));    
   </script>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="js/books.js"></script>
 
 </body>
 
