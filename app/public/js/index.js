@@ -6,7 +6,7 @@ const User = {
                 location: "",
                 dob: "",
                 picture: ""
-            }
+            }            
         }
     },
     methods: {
@@ -31,7 +31,7 @@ const User = {
 		}
     },
     created() {
-        this.fetch_user_data();
+        this.fetch_user_data();        
     }
 }
 
