@@ -54,7 +54,7 @@
     
     <main class="row">
       <div class="col-lg-3">
-        <div id="user">
+        <div id="app">
           <div class="card bg-light" style="width: 16rem;">
             <img class="card-img-top" :src="result.picture.large" alt="profile pic">
             <div class="card-body">
@@ -63,12 +63,12 @@
             <ul class="list-group list-group-flush">
               <li class="list-group-item"><b>Country of Origin: </b>{{ result.location.country }}</li>
               <li class="list-group-item"><b>Email: </b><a :href="'mailto:'+result.email">{{ result.email }}</a></li>
-              <li class="list-group-item"><b>Birthday: </b>{{ format_date(result.dob.date) }}</li>
+              <li class="list-group-item"><b>Birthday: </b>{{ formatDate(result.dob.date) }}</li>
               <li class="list-group-item"><b>Age: </b>{{ result.dob.age }}</li>
               <li class="list-group-item"><b>Address: </b>{{ result.location.city + ", " + result.location.state }}</li>
               <li class="list-group-item"><b>Phone: </b>{{ result.cell }}</li>          
             </ul>
-            <form v-on:submit.prevent="fetch_user_data">
+            <form v-on:submit.prevent="fetchUserData">
               <button class="btn btn-dark" type="submit">Refresh</button>
             </form>
           </div>

@@ -53,7 +53,7 @@
     <main>
       <div class="row">
         <div class="col-lg-12">
-          <div id="books">
+          <div id="app">
             <table id="book-table" class="table">
               <thead>
                 <th>
@@ -99,7 +99,7 @@
               </tbody>
             </table>
             <br>
-            <form action="">
+            <form v-on:submit.prevent="addNewBook">
                 <table class="table">
                     <thead>
                         <th colspan="2">
@@ -112,7 +112,7 @@
                                 Title:
                             </td>
                             <td>
-                                <input type="text" name="title">
+                                <input type="text" name="title" v-model="newBookForm.title">
                             </td>
                         </tr>
                         <tr>
@@ -120,7 +120,7 @@
                                 Author(s):
                             </td>
                             <td>
-                                <input type="text">
+                                <input type="text" v-model="newBookForm.authors">
                             </td>
                         </tr>
                         <tr>
@@ -128,7 +128,7 @@
                                 Year Published:
                             </td>
                             <td>
-                                <input type="number" min="0" max="2021">
+                                <input type="number" min="0" max="2021" v-model="newBookForm.yearPublished">
                             </td>
                         </tr>
                         <tr>
@@ -136,7 +136,7 @@
                                 Publisher:
                             </td>
                             <td>
-                                <input type="text">
+                                <input type="text" v-model="newBookForm.publisher">
                             </td>
                         </tr>
                         <tr>
@@ -144,7 +144,7 @@
                                 Page Count:
                             </td>
                             <td>
-                                <input type="number" min="0">
+                                <input type="number" min="0" v-model="newBookForm.pageCount">
                             </td>
                         </tr>
                         <tr>
@@ -152,7 +152,7 @@
                                 MSRP:
                             </td>
                             <td>
-                                <input type="number" min="0">
+                                <input type="number" min="0" v-model="newBookForm.msrp">
                             </td>
                         </tr>
                         <tr>
@@ -178,7 +178,7 @@
     new Tablesort(document.getElementById('book-table'));    
   </script>
   <script src="https://unpkg.com/vue@next"></script>
-  <script src="js/books.js"></script>
+  <script src="js/index.js"></script>
 
 </body>
 
