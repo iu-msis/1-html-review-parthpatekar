@@ -1,4 +1,4 @@
-const User = {
+const Controller = {
     data() {
         return{
             result: {
@@ -6,7 +6,8 @@ const User = {
                 location: "",
                 dob: "",
                 picture: ""
-            }            
+            },
+            books: []
         }
     },
     methods: {
@@ -14,7 +15,7 @@ const User = {
             const date_ = new Date(date_string);
             return new Intl.DateTimeFormat('default', {dateStyle: 'long'}).format(date_);
         },
-		fetch_user_data(){
+		fetchUserData(){
 			fetch('https://randomuser.me/api')
 			.then(response => response.json())
 			.then(
@@ -28,11 +29,22 @@ const User = {
 					console.error(error);
 				}
 			)
-		}
+		},
+        fetchBooksData() {
+            fetch('/api/books/books.php')
+            .then( response => response.json() )
+            .then( (responseJson) => {                
+                this.books = responseJson;                
+            })
+            .catch( (err) => {
+                console.error(err);
+            })
+        }
     },
     created() {
-        this.fetch_user_data();        
+        this.fetchUserData();
+        this.fetchBooksData();   
     }
 }
 
-Vue.createApp(User).mount('#user')
+Vue.createApp(Controller).mount('#app')
