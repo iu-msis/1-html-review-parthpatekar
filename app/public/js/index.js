@@ -7,11 +7,12 @@ const Controller = {
                 dob: "",
                 picture: ""
             },
-            books: []
+            books: [],
+            newBookForm: {}
         }
     },
     methods: {
-        format_date(date_string) {
+        formatDate(date_string) {
             const date_ = new Date(date_string);
             return new Intl.DateTimeFormat('default', {dateStyle: 'long'}).format(date_);
         },
@@ -39,6 +40,20 @@ const Controller = {
             .catch( (err) => {
                 console.error(err);
             })
+        },
+        addNewBook(event) {
+            fetch('/api/books/createBook.php', {
+                method: "POST",
+                body: JSON.stringify(this.newBookForm),
+                headers: {
+                    "Content-Type": "application/json; charset=utf-8"
+                }
+            })
+            .then( response => response.json() )
+            .then( json => {
+                this.books = json;
+                this.newBookForm = {};
+            });
         }
     },
     created() {
